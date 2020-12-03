@@ -2,6 +2,7 @@ import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
 import './main.html';
+if (Meteor.isClient) { 
 
 Template.hello.onCreated(function helloOnCreated() {
   // counter starts at 0
@@ -20,3 +21,10 @@ Template.hello.events({
     instance.counter.set(instance.counter.get() + 1);
   },
 });
+}
+
+if (Meteor.isServer) {  
+  Meteor.startup(function () {
+    // code to run on server at startup
+  });
+}

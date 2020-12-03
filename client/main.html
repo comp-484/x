@@ -1,13 +1,39 @@
 <head>  
-  <title>twitterClone</title>
+  <title>Sodia</title>
+  <script src="main.js" async></script>
+  <link rel="stylesheet" href="main.css">
 </head>
 
 <body>  
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
+  <h1>Welcome to Sodia!</h1>
+  {{>iconsBar}}
+  {{>hello}}
+  {{>textBox}}
 </body>
 
+
+<!--Modular Code Blocks-->
+<!--Header Bar-->
+<template name="iconsBar">  
+  <div class = "icon-container">
+    <nav role="navigation">
+      <a href="/main" title="Home"> </a>
+      <a href="/profile" title="Profile"> </a>
+      <a href="/settings" title="Settings"> </a>
+      <a href="/signup" title="Log out"></a>
+    </nav>
+  </div>
+</template>
+
+<!--textBox template-->
+<template name="textBox">  
+  <div class = "text-container">
+    <p>Home</p>
+    <textarea class="form-control" id="tweetText" placeholder="What's happening?" rows="3"></textarea>
+  </div>
+</template>
+
+<!--hello template-->
 <template name="hello">  
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
