@@ -1,40 +1,193 @@
-<head>  
+<head>
+  <meta charset="utf-8">
   <title>Sodia</title>
-  <script src="main.js" async></script>
   <link rel="stylesheet" href="main.css">
+  <script src="main.js" defer></script>
 </head>
 
-<body>  
-  <h1>Welcome to Sodia!</h1>
+<body>
   {{>iconsBar}}
-  {{>hello}}
-  {{>textBox}}
+  {{>mediaColumns}}
 </body>
 
 
 <!--Modular Code Blocks-->
 <!--Header Bar-->
-<template name="iconsBar">  
+<template name="iconsBar">
   <div class = "icon-container">
-    <nav role="navigation">
-      <a href="/main" title="Home"> </a>
-      <a href="/profile" title="Profile"> </a>
-      <a href="/settings" title="Settings"> </a>
-      <a href="/signup" title="Log out"></a>
+    <h1>Sodia</h1>
+    <nav role="navigation" class="navBar">
+      <a href="/main" title="Home"><button type="button" name="button">Home</button></a>
+      <a href="/profile" title="Profile"><button type="button" name="button">Profile</button></a>
+      <a href="/settings" title="Settings"><button type="button" name="button">Settings</button></a>
+      <a href="/signup" title="Log out"><button type="button" name="button">Logout</button></a>
     </nav>
+    {{>dropDown}}
+  </div>
+</template>
+
+<template name="mediaColumns">
+  <div class="columnContainer">
+    <div class="column" id="controlColumn">
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4>User Name</h4>
+      </div>
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4>Friends</h4>
+      </div>
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4>Messages</h4>
+      </div>
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4>Groups</h4>
+      </div>
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4>Favorites</h4>
+      </div>
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4>Games</h4>
+      </div>
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4>Discover</h4>
+      </div>
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4>Videos</h4>
+      </div>
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4></h4>
+      </div>
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4></h4>
+      </div>
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4></h4>
+      </div>
+    </div>
+    <div class="column" id="feedColumn">
+      <!--{{>hello}}-->
+      {{>textBox}}
+      {{>feedBox}}
+      {{>feedBox}}
+      {{>feedBox}}
+    </div>
+    <div class="column" id="friendColumn">
+      <h2>Contacts</h2>
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4>User Friends</h4>
+      </div>
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4>User Friends</h4>
+      </div>
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4>User Friends</h4>
+      </div>
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4>User Friends</h4>
+      </div>
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4>User Friends</h4>
+      </div>
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4>User Friends</h4>
+      </div>
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4>User Friends</h4>
+      </div>
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4>User Friends</h4>
+      </div>
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4>User Friends</h4>
+      </div>
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4>User Friends</h4>
+      </div>
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4>User Friends</h4>
+      </div>
+    </div>
   </div>
 </template>
 
 <!--textBox template-->
-<template name="textBox">  
+<template name="textBox">
   <div class = "text-container">
-    <p>Home</p>
+    <div class="user-photo"></div>
     <textarea class="form-control" id="tweetText" placeholder="What's happening?" rows="3"></textarea>
   </div>
 </template>
 
+<template name="feedBox">
+  <div class="feed-container">
+    <div class="postUser">
+      <div class="control-photo"></div>
+      <h4>User Name</h4>
+    </div>
+    <div class="postContent">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="divider"></div>
+    <div class="postFeedback">
+      <div class="feedback">Like</div>
+      <div class="feedback">Comment</div>
+      <div class="feedback">Share</div>
+    </div>
+  </div>
+
+
+</template>
+
+<template name="dropDown">
+  <div class="dropDown-container">
+    <div class="dropDown-button-container">
+      <button id="addButton" type="button" name="button" class="dropDown-button">Add</button>
+      <button id="notifButton" type="button" name="button" class="dropDown-button">Notifications</button>
+      <button id="accountButton" type="button" name="button" class="dropDown-button">Account</button>
+    </div>
+    <div id="dropdown1" class="dropDown-content">
+      <a href="#">Add Link 1</a>
+      <a href="#">Add Link 2</a>
+      <a href="#">Add Link 3</a>
+    </div>
+    <div id="dropdown2" class="dropDown-content">
+      <a href="#">Notification Link 1</a>
+      <a href="#">Notification Link 2</a>
+      <a href="#">Notification Link 3</a>
+    </div>
+    <div id="dropdown3" class="dropDown-content">
+      <a href="#">Account Link 1</a>
+      <a href="#">Account Link 2</a>
+      <a href="#">Account Link 3</a>
+    </div>
+  </div>
+</template>
+
 <!--hello template-->
-<template name="hello">  
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="hello">
+  <div class="user-container">
+    <button>Click Me</button>
+    <p>You've pressed the button {{counter}} times.</p>
+  </div>
 </template>
