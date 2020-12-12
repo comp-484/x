@@ -16,12 +16,12 @@
 <template name="iconsBar">
   <div class = "icon-container">
     <h1>Sodia</h1>
-    <nav role="navigation" class="navBar">
-      <a href="/main" title="Home"><button type="button" name="button">Home</button></a>
-      <a href="/profile" title="Profile"><button type="button" name="button">Profile</button></a>
-      <a href="/settings" title="Settings"><button type="button" name="button">Settings</button></a>
-      <a href="/signup" title="Log out"><button type="button" name="button">Logout</button></a>
-    </nav>
+      <div class="navBar">
+        <a href="/main" title="Home">Home</a>
+        <a href="/profile" title="Profile">Profile</a>
+        <a href="/settings" title="Settings">Settings</a>
+        <a href="/signup" title="Log out">Logout</a>
+      </div>
     {{>dropDown}}
   </div>
 </template>
@@ -61,6 +61,7 @@
         <div class="control-photo"></div>
         <h4>Videos</h4>
       </div>
+      <div class="divider"></div>
       <div class="controlContent">
         <div class="control-photo"></div>
         <h4></h4>
@@ -133,9 +134,12 @@
 
 <!--textBox template-->
 <template name="textBox">
-  <div class = "text-container">
-    <div class="user-photo"></div>
-    <textarea class="form-control" id="tweetText" placeholder="What's happening?" rows="3"></textarea>
+  <div class="post-container">
+    <div class ="text-container">
+      <div class="user-photo"></div>
+      <textarea class="form-control" id="tweetText" placeholder="What's happening?" rows="3"></textarea>
+    </div>
+    <div class="postText"><h3>POST</h3></div>
   </div>
 </template>
 
@@ -150,13 +154,11 @@
     </div>
     <div class="divider"></div>
     <div class="postFeedback">
-      <div class="feedback">Like</div>
-      <div class="feedback">Comment</div>
-      <div class="feedback">Share</div>
+      <div class="feedback"><h3>Like</h3></div>
+      <div class="feedback"><h3>Comment</h3></div>
+      <div class="feedback"><h3>Share</h3></div>
     </div>
   </div>
-
-
 </template>
 
 <template name="dropDown">
