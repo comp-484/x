@@ -1,7 +1,20 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 import './main.html';
+import './profile.html'
+import './settings.html'
 
+Router.route('/', function () {
+  this.render('main');
+});
+
+Router.route('/profile', function () {
+  this.render('profile');
+});
+
+Router.route('/settings', function () {
+  this.render('settings');
+});
 //dropdown menus
 let drop1;
 let drop2;
@@ -9,7 +22,7 @@ let drop3;
 
 if (Meteor.isClient)
 {
-  Template.body.onRendered(function()
+  Template.dropDown.onRendered(function()
     {
       drop1 = document.querySelector("#dropdown1");
       drop2 = document.querySelector("#dropdown2");
@@ -40,24 +53,6 @@ if (Meteor.isClient)
       drop2.classList.remove("show");
       drop3.classList.toggle("show");
     }
-  });
-
-  Template.hello.onCreated(function helloOnCreated() {
-    // counter starts at 0
-    this.counter = new ReactiveVar(0);
-  });
-
-  Template.hello.helpers({
-    counter() {
-      return Template.instance().counter.get();
-    },
-  });
-
-  Template.hello.events({
-    'click button'(event, instance) {
-      // increment the counter when button is clicked
-      instance.counter.set(instance.counter.get() + 1);
-    },
   });
 }
 

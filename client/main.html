@@ -1,4 +1,4 @@
-<head>
+<!--<head>
   <meta charset="utf-8">
   <title>Sodia</title>
   <link rel="stylesheet" href="main.css">
@@ -8,21 +8,48 @@
 <body>
   {{>iconsBar}}
   {{>mediaColumns}}
-</body>
+</body>-->
 
-
+<template name="main">
+  {{>iconsBar}}
+  {{>mediaColumns}}
+</template>
 <!--Modular Code Blocks-->
 <!--Header Bar-->
 <template name="iconsBar">
   <div class = "icon-container">
     <h1>Sodia</h1>
       <div class="navBar">
-        <a href="/main" title="Home">Home</a>
-        <a href="/profile" title="Profile">Profile</a>
-        <a href="/settings" title="Settings">Settings</a>
-        <a href="/signup" title="Log out">Logout</a>
+        <a id="homepage" href="/" title="Home">Home</a>
+        <a id="profilepage" href="/profile" title="Profile">Profile</a>
+        <a id="settingspage" href="/settings" title="Settings">Settings</a>
       </div>
     {{>dropDown}}
+  </div>
+</template>
+
+<template name="dropDown">
+  <div class="dropDown-container">
+    <div class="dropDown-button-container">
+      <button id="addButton" type="button" name="button" class="dropDown-button">Add</button>
+      <button id="notifButton" type="button" name="button" class="dropDown-button">Notifications</button>
+      <button id="accountButton" type="button" name="button" class="dropDown-button">Account</button>
+    </div>
+    <div id="dropdown1" class="dropDown-content">
+      <a href="#">Add Link 1</a>
+      <a href="#">Add Link 2</a>
+      <a href="#">Add Link 3</a>
+    </div>
+    <div id="dropdown2" class="dropDown-content">
+      <a href="#">Notification Link 1</a>
+      <a href="#">Notification Link 2</a>
+      <a href="#">Notification Link 3</a>
+    </div>
+    <div id="dropdown3" class="dropDown-content">
+      <a href="#">Profile</a>
+      <a href="#">Settings</a>
+      <a href="#">Logout</a>
+    </div>
   </div>
 </template>
 
@@ -157,31 +184,6 @@
       <div class="feedback"><h3>Like</h3></div>
       <div class="feedback"><h3>Comment</h3></div>
       <div class="feedback"><h3>Share</h3></div>
-    </div>
-  </div>
-</template>
-
-<template name="dropDown">
-  <div class="dropDown-container">
-    <div class="dropDown-button-container">
-      <button id="addButton" type="button" name="button" class="dropDown-button">Add</button>
-      <button id="notifButton" type="button" name="button" class="dropDown-button">Notifications</button>
-      <button id="accountButton" type="button" name="button" class="dropDown-button">Account</button>
-    </div>
-    <div id="dropdown1" class="dropDown-content">
-      <a href="#">Add Link 1</a>
-      <a href="#">Add Link 2</a>
-      <a href="#">Add Link 3</a>
-    </div>
-    <div id="dropdown2" class="dropDown-content">
-      <a href="#">Notification Link 1</a>
-      <a href="#">Notification Link 2</a>
-      <a href="#">Notification Link 3</a>
-    </div>
-    <div id="dropdown3" class="dropDown-content">
-      <a href="#">Account Link 1</a>
-      <a href="#">Account Link 2</a>
-      <a href="#">Account Link 3</a>
     </div>
   </div>
 </template>
