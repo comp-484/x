@@ -85,6 +85,12 @@ Template.textBox.events({
       return Posts.find({}, { sort: {timestamp: -1}, limit: 10 });
     }
   });
+
+  Template.contactList.helpers({
+    'userFollower': function(){
+      return Relationships.find({follower: Meteor.user().username}, { sort: {following: Meteor.user().username}, limit: 10});
+    }
+  });
   
   Template.feedBox.onCreated(function() {
     if (Meteor.user()) {

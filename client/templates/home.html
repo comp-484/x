@@ -57,42 +57,20 @@
         {{>feedBox}}
       </div>
       <div class="column" id="friendColumn">
-        <h2>Contacts</h2>
-        <div class="controlContent">
-            <div class="control-photo"></div>
-            <h4>User Friends</h4>
-        </div>
-        <div class="controlContent">
-            <div class="control-photo"></div>
-            <h4>User Friends</h4>
-        </div>
-        <div class="controlContent">
-            <div class="control-photo"></div>
-            <h4>User Friends</h4>
-        </div>
-        <div class="controlContent">
-            <div class="control-photo"></div>
-            <h4>User Friends</h4>
-        </div>
-        <div class="controlContent">
-            <div class="control-photo"></div>
-            <h4>User Friends</h4>
-        </div>
-        <div class="controlContent">
-            <div class="control-photo"></div>
-            <h4>User Friends</h4>
-        </div>
-        <div class="controlContent">
-            <div class="control-photo"></div>
-            <h4>User Friends</h4>
-        </div>
-        <div class="controlContent">
-            <div class="control-photo"></div>
-            <h4>User Friends</h4>
-        </div>
+        {{>contactList}}
         {{>followUsers}}
       </div>
     </div>
+  </template>
+
+  <template name="contactList">
+    <h2>Contacts</h2>
+    {{#each userFollower}}
+      <div class="controlContent">
+        <div class="control-photo"></div>
+        <h4>{{this.following}}</h4>
+      </div>
+    {{/each}}
   </template>
   
   <!--textBox template-->
@@ -104,7 +82,7 @@
         </div>
         <div class="character-count">
             <p class="{{charClass}}">{{charCount}}</p>
-            <button class="publishText" id="publish-post">POST</button>
+            <button class="publishText" id="publish-post" {{disableButton}}>POST</button>
         </div>
     </div>
   </template>
