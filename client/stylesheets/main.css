@@ -1,0 +1,40 @@
+/* CSS declarations go here */
+
+html, body{
+  margin: 0;
+  font-family: sans-serif;
+  height: 100%;
+  width: 100%;
+  background-color: #1b1b1b;
+}
+
+h1, h2, h4{
+  color: white;
+}
+
+.user-login{
+  margin: auto;
+  text-align: center;
+}
+
+.panel-body{
+  background-color: #1b1b1b;
+  margin: auto;
+  padding: 0px;
+}
+
+.form-group input{
+  width: 40%;
+  margin: auto;
+}
+
+#login, #signup{
+  width: 200px;
+  border-radius: 30px;
+}
+
+.user-container {
+  margin: auto;
+}
+
+

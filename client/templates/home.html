@@ -1,0 +1,135 @@
+<template name="home">
+    {{>iconsBar}}
+    {{>mediaColumns}}
+</template>
+  
+  <template name="mediaColumns">
+    <div class="columnContainer">
+      <div class="column" id="controlColumn">
+        <div class="controlContent">
+          <div class="control-photo"></div>
+          <h4>{{currentUser.username}}</h4>
+        </div>
+        <div class="controlContent">
+          <div class="control-photo"></div>
+          <h4>Friends</h4>
+        </div>
+        <div class="controlContent">
+          <div class="control-photo"></div>
+          <h4>Messages</h4>
+        </div>
+        <div class="controlContent">
+          <div class="control-photo"></div>
+          <h4>Groups</h4>
+        </div>
+        <div class="controlContent">
+          <div class="control-photo"></div>
+          <h4>Favorites</h4>
+        </div>
+        <div class="controlContent">
+          <div class="control-photo"></div>
+          <h4>Games</h4>
+        </div>
+        <div class="controlContent">
+          <div class="control-photo"></div>
+          <h4>Discover</h4>
+        </div>
+        <div class="controlContent">
+          <div class="control-photo"></div>
+          <h4>Videos</h4>
+        </div>
+        <div class="divider"></div>
+        <div class="controlContent">
+          <div class="control-photo"></div>
+          <h4></h4>
+        </div>
+        <div class="controlContent">
+          <div class="control-photo"></div>
+          <h4></h4>
+        </div>
+        <div class="controlContent">
+          <div class="control-photo"></div>
+          <h4></h4>
+        </div>
+      </div>
+      <div class="column" id="feedColumn">
+        {{>textBox}}
+        {{>feedBox}}
+      </div>
+      <div class="column" id="friendColumn">
+        <h2>Contacts</h2>
+        <div class="controlContent">
+            <div class="control-photo"></div>
+            <h4>User Friends</h4>
+        </div>
+        <div class="controlContent">
+            <div class="control-photo"></div>
+            <h4>User Friends</h4>
+        </div>
+        <div class="controlContent">
+            <div class="control-photo"></div>
+            <h4>User Friends</h4>
+        </div>
+        <div class="controlContent">
+            <div class="control-photo"></div>
+            <h4>User Friends</h4>
+        </div>
+        <div class="controlContent">
+            <div class="control-photo"></div>
+            <h4>User Friends</h4>
+        </div>
+        <div class="controlContent">
+            <div class="control-photo"></div>
+            <h4>User Friends</h4>
+        </div>
+        <div class="controlContent">
+            <div class="control-photo"></div>
+            <h4>User Friends</h4>
+        </div>
+        <div class="controlContent">
+            <div class="control-photo"></div>
+            <h4>User Friends</h4>
+        </div>
+        {{>followUsers}}
+      </div>
+    </div>
+  </template>
+  
+  <!--textBox template-->
+  <template name="textBox">
+    <div class="post-container">
+        <div class ="text-container">
+            <div class="user-photo"></div>
+            <textarea class="form-control" id="postText" placeholder="What's happening?" rows="3"></textarea>
+        </div>
+        <div class="character-count">
+            <p class="{{charClass}}">{{charCount}}</p>
+            <button class="publishText" id="publish-post">POST</button>
+        </div>
+    </div>
+  </template>
+
+  <template name="feedBox">
+    <div class="feed-container">
+        {{#each postMessage}}
+            <div class="feed-content">
+                <div class="postUser">
+                    <div class="control-photo"></div>
+                    <div>
+                        <span style="font-size: 18px;">{{this.user}}</span><br>
+                        <span style="font-size: 13px; font-weight: bold;">{{this.timestamp}}</span>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="postContent"><span style="font-size: 18px;">{{this.message}}</span></div>
+                <div class="divider"></div>
+                <div class="postFeedback">
+                    <div class="feedback"><h4>Like</h4></div>
+                    <div class="feedback"><h4>Comment</h4></div>
+                    <div class="feedback"><h4>Share</h4></div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+  </template>
+  
