@@ -7,49 +7,38 @@
     <div class="columnContainer">
       <div class="column" id="controlColumn">
         <div class="controlContent">
-          <div class="control-photo"></div>
+          <div class="control-photo">
+            <img src="https://lh3.googleusercontent.com/a/default-user=s28-c-k-no">
+          </div>
           <h4>{{currentUser.username}}</h4>
         </div>
         <div class="controlContent">
-          <div class="control-photo"></div>
+          <div class="control-photo" style="background-color: #1abc9c;"></div>
           <h4>Friends</h4>
         </div>
         <div class="controlContent">
-          <div class="control-photo"></div>
+          <div class="control-photo" style="background-color: #2ecc71;"></div>
           <h4>Messages</h4>
         </div>
         <div class="controlContent">
-          <div class="control-photo"></div>
+          <div class="control-photo" style="background-color: #3498db;"></div>
           <h4>Groups</h4>
         </div>
         <div class="controlContent">
-          <div class="control-photo"></div>
+          <div class="control-photo" style="background-color: #9b59b6"></div>
           <h4>Favorites</h4>
         </div>
         <div class="controlContent">
-          <div class="control-photo"></div>
+          <div class="control-photo" style="background-color: #34495e;"></div>
           <h4>Games</h4>
         </div>
         <div class="controlContent">
-          <div class="control-photo"></div>
+          <div class="control-photo" style="background-color: #f1c40f"></div>
           <h4>Discover</h4>
         </div>
         <div class="controlContent">
-          <div class="control-photo"></div>
+          <div class="control-photo" style="background-color: #e67e22;"></div>
           <h4>Videos</h4>
-        </div>
-        <div class="divider"></div>
-        <div class="controlContent">
-          <div class="control-photo"></div>
-          <h4></h4>
-        </div>
-        <div class="controlContent">
-          <div class="control-photo"></div>
-          <h4></h4>
-        </div>
-        <div class="controlContent">
-          <div class="control-photo"></div>
-          <h4></h4>
         </div>
       </div>
       <div class="column" id="feedColumn">
@@ -67,7 +56,9 @@
     <h2>Contacts</h2>
     {{#each userFollower}}
       <div class="controlContent">
-        <div class="control-photo"></div>
+        <div class="control-photo">
+          <img src="https://lh3.googleusercontent.com/a/default-user=s28-c-k-no">
+        </div>
         <h4>{{this.following}}</h4>
       </div>
     {{/each}}
@@ -77,7 +68,9 @@
   <template name="textBox">
     <div class="post-container">
         <div class ="text-container">
-            <div class="user-photo"></div>
+            <div class="user-photo">
+              <img src="https://lh3.googleusercontent.com/a/default-user=s28-c-k-no">
+            </div>
             <textarea class="form-control" id="postText" placeholder="What's happening?" rows="3"></textarea>
         </div>
         <div class="character-count">
@@ -92,7 +85,9 @@
         {{#each postMessage}}
             <div class="feed-content">
                 <div class="postUser">
-                    <div class="control-photo"></div>
+                    <div class="control-photo">
+                      <img src="https://lh3.googleusercontent.com/a/default-user=s28-c-k-no">
+                    </div>
                     <div>
                         <span style="font-size: 18px;">{{this.user}}</span><br>
                         <span style="font-size: 13px; font-weight: bold;">{{this.timestamp}}</span>

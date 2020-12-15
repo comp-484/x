@@ -25,10 +25,10 @@
 
 .character-count
 {
-  display: flex; 
-  float: right; 
-  margin-right: 20px; 
-  width: 130px; 
+  display: flex;
+  float: right;
+  margin-right: 20px;
+  width: 130px;
   height: 40px;
 }
 
@@ -40,7 +40,8 @@
 .publishText
 {
   margin: auto;
-  color: black;
+  color: white;
+  background-color: #5bc0de;
   border: 0;
   width: 130px;
   height: 40px;
@@ -180,6 +181,7 @@
 .navBar table
 {
   text-align: center;
+  font-size: 20px;
 }
 
 .tableHeader, .tableContent
@@ -293,4 +295,16 @@ h4
 #feedColumn
 {
   width: 60%;
+}
+
+.user-photo img 
+{
+  border-radius: 50%;
+  width: 60px;
+}
+
+.control-photo img
+{
+  border-radius: 50%;
+  width: 40px;
 }

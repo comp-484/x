@@ -13,8 +13,18 @@ h1, h2, h4, h5{
 }
 
 .user-login{
-  margin: auto;
   text-align: center;
+  margin-top: 100px;
+}
+
+.user-login h1{
+  margin-bottom: 20px;
+}
+
+.user-login input{
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  width: 302px !important;
 }
 
 .panel-body{
@@ -29,8 +39,8 @@ h1, h2, h4, h5{
 }
 
 #login, #signup{
-  width: 200px;
-  border-radius: 30px;
+  width: 302px;
+  background-color: #18A4ED;
 }
 
 .user-container {
